@@ -10,32 +10,35 @@ false;
 
 // Boolean - true or false
 let hasBrother = false;
-console.log(hasBrother);
+// console.log(hasBrother);
 
 // null
 let noValue = null;
-console.log(noValue);
+// console.log(noValue);
 
 //undefined
-let hasValue = undefined;
-hasValue = 1;
-console.log(hasValue);
+let hasValue;
+hasValue = "1";
+// console.log(hasValue);
 
 // Number
 let number = 121; //Value = number
-console.log(number);
+// console.log(number);
 
 //String
 let stringNumber = "121"; // value = string
-console.log(stringNumber);
-console.log(number === stringNumber);
+let stringTwo = `121 ${number}`;
+// console.log(stringNumber);
+// console.log(stringTwo);
+// console.log(number === stringNumber);
 
 // BigInt
 let largeValue = 3242985238534230934820385138902849048435803485n;
-console.log(largeValue);
+// console.log(largeValue);
 
 // Symbol
 let symbol1 = Symbol("2");
+
 let symbol2 = Symbol("2");
 console.log(symbol1 === symbol2);
 
