@@ -51,8 +51,8 @@ foods.shift();
 
 // concat()
 //  0      1            2
-const groceries = ["Milk", "Biscuits", "Toofees"];
-const groceries2 = ["Chocolate", "Chewing Gum", "Cabbage"];
+// const sweets = ["Milk", "Biscuits", "Toofees"];
+// const groceries2 = ["Chocolate", "Chewing Gum", "Cabbage"];
 
 // const mainGrocery = groceries2.concat(groceries);
 // console.log(mainGrocery);
@@ -63,10 +63,11 @@ const groceries2 = ["Chocolate", "Chewing Gum", "Cabbage"];
 // console.log("These are combined: " + joinedStuff.length);
 
 //slice()
-const someStuffs = groceries.slice(0, 1);
-// console.log(someStuffs);
+const groceries = ["Chocolate", "Chewing Gum", "Toffes", "Milk", "Biscuits"];
+const someStuffs = groceries.slice(0, 4);
+console.log(someStuffs);
 // console.log(groceries);
 
-// splice()
-const sweets = groceries.splice(0, 2);
-console.log(groceries);
+// // splice()
+// const sweets = groceries.splice(0, 2);
+// console.log(groceries);
