@@ -20,12 +20,73 @@
 // console.log(newArry);
 
 // Your Unix timestamp
-var unixTimestamp = 1700200830;
+// var unixTimestamp = 1700200830;
 
-// Convert to JavaScript timestamp and create a new Date object
-var dateObj = new Date(unixTimestamp * 1000);
+// // Convert to JavaScript timestamp and create a new Date object
+// var dateObj = new Date(unixTimestamp * 1000);
 
-// Convert to localized date and time string
-var formattedDate = dateObj.toLocaleString();
+// // Convert to localized date and time string
+// var formattedDate = dateObj.toLocaleString();
 
-console.log(formattedDate);
+// console.log(formattedDate);
+
+// freeCodeCamp - JS reduce() method
+/*
+These are what you can do with reduce() method
+
+1. Summarizing your values into a single value
+2. Grouping similar items together
+3. Removing duplicates from an array
+
+*/
+
+// 1. Summarizing your values into a single value
+
+// const items = [
+//   { name: "Apple", price: 1 },
+//   { name: "Orange", price: 2 },
+//   { name: "Mango", price: 3 },
+// ];
+
+// Calculating the total price using forEach() method
+// let totalPrice = 0;
+// items.forEach((item) => (totalPrice += item.price));
+
+// console.log(totalPrice); //6
+
+// Using reduce()
+// const totalPrice = items.reduce((acc, item) => {
+//   return (acc += item.price);
+// }, 0);
+// console.log(totalPrice);
+
+// 2. Grouping similar items together (grouping category)
+const items = [
+  { name: "Apple", category: "Fruit" },
+  { name: "Onion", category: "Vegetable" },
+  { name: "Orange", category: "Fruit" },
+  { name: "Lettuce", category: "Vegetable" },
+];
+
+const groupedItems = items.reduce((acc, item) => {
+  const category = item.category;
+  if (!acc[category]) {
+    acc[category] = [];
+  }
+  acc[category].push(item.name);
+  return acc;
+}, {});
+
+console.log(groupedItems);
+
+// 3. Removing duplicates from an array
+const duplicates = [1, 2, 3, 1, 2, 3, 8, 7];
+
+const nonDuplicates = duplicates.reduce((acc, item) => {
+  if (!acc.includes(item)) {
+    acc.push(item);
+  }
+  return acc;
+}, []);
+
+console.log(nonDuplicates);
